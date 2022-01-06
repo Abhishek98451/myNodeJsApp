@@ -49,22 +49,6 @@
                       <span class="sr-only">(current)</span>
                     </a>
                 </li> 
-
-                <li class="nav-item"><a class="nav-link" href="packages.php">Packages</a></li>
-
-                <li class="nav-item"><a class="nav-link" href="blog.php">Blog</a></li>
-
-                <li class="nav-item dropdown active">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">More</a>
-                    
-                    <div class="dropdown-menu">
-                      <a class="dropdown-item active" href="about-us.php">About Us</a>
-                      <a class="dropdown-item" href="testimonials.php">Testimonials</a>
-                      <a class="dropdown-item" href="terms.php">Terms</a>
-                    </div>
-                </li>
-                
-                <li class="nav-item"><a class="nav-link" href="contact.php">Contact Us</a></li>
             </ul>
           </div>
         </div>
