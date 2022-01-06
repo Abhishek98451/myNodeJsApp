@@ -1,0 +1,8 @@
+folder('myProjectSeed')
+job('myProjectSeed/myProject'){
+    stages{
+        steps{
+            git 
+        }
+    }
+}
