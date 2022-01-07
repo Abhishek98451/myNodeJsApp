@@ -17,7 +17,7 @@ job('myProjectSeed/myProject'){
     }
     // Building Docker images
     steps{
-      shell(dockerImage = docker.build "${IMAGE_REPO_NAME}:${IMAGE_TAG}")
+      shell(dockerImage ="docker build -t ${IMAGE_REPO_NAME}:${IMAGE_TAG}")
       
     }
     // Uploading Docker images into AWS ECR
