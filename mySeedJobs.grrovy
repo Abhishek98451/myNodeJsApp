@@ -3,5 +3,5 @@ job('myProjectSeed/myProject'){
     scm{
         git('https://github.com/Abhishek98451/myNodeJsApp.git')
     }
-    
+
 }
