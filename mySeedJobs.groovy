@@ -15,6 +15,11 @@ job('myProjectSeed/myProject'){
        
           
     }
+    steps{
+      scm{
+        git('https://github.com/Abhishek98451/myNodeJsApp.git')
+      }
+    }
     // Building Docker images
     steps{
       shell(dockerImage ="docker build -t ${IMAGE_REPO_NAME}:${IMAGE_TAG}")
