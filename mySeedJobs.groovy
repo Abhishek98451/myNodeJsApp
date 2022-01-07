@@ -1,4 +1,4 @@
-Import allDataVariable
+import allDataVariable
 folder('myProjectSeed')
 job('myProjectSeed/myProject'){
     scm{
