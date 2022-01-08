@@ -1,18 +1,10 @@
-FROM centos:centos7.7.1908
+FROM php:7.3-cli
 
 #Install git and MySQL extensions for PHP
-RUN #!/bin/bash
-RUN yum install yum-utils -y
-RUN yum update -y 
-RUN yum install php php-mcrypt php-cli php-gd php-curl php-mysql php-ldap php-zip php-fileinfo -y
-RUN yum install -y httpd -y
-RUN chmod 2775 /var/www
-RUN find /var/www -type d -exec chmod 2775 {} \;
-RUN find /var/www -type f -exec chmod 0664 {} \;
-RUN cd /var/www/html
-RUN yum update && \
-    yum upgrade -y && \
-    yum install -y git
-RUN git clone https://github.com/Abhishek98451/myNodeJsApp.git
-WORKDIR /var/www/html/myNodeJsApp/
-CMD [ "php" ,'project/index.php' ]
+RUN docker-php-ext-install mysqli
+COPY  index.php ./ec2-user/src/myNodejs
+COPY src /var/www/html/
+EXPOSE 80/tcp
+EXPOSE 443/tcp
+WORKDIR /ec2-user/src/myNodejs
+CMD [ "php" ,'./project/index.php' ]
