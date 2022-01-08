@@ -6,9 +6,7 @@ IMAGE_TAG="latest"
 REPOSITORY_URI = "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/${IMAGE_REPO_NAME}"
 folder('myProjectSeed')
 job('myProjectSeed/myProject'){
-    scm{
-        git('https://github.com/Abhishek98451/myNodeJsApp.git')
-    }
+   
     steps {
         
           shell( "aws ecr get-login-password --region ${AWS_DEFAULT_REGION} | docker login --username AWS --password-stdin ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com")
