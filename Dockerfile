@@ -4,6 +4,7 @@ FROM centos:centos7.7.1908
 RUN #!/bin/bash
 RUN yum install yum-utils -y
 RUN yum update -y 
+RUN yum install php php-mcrypt php-cli php-gd php-curl php-mysql php-ldap php-zip php-fileinfo -y
 RUN yum install -y php7.2 -y
 RUN yum install -y httpd -y
 RUN systemctl start httpd 
