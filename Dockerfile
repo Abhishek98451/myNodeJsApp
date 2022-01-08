@@ -10,6 +10,9 @@ RUN chmod 2775 /var/www
 RUN find /var/www -type d -exec chmod 2775 {} \;
 RUN find /var/www -type f -exec chmod 0664 {} \;
 RUN cd /var/www/html
+RUN yum update && \
+    yum upgrade -y && \
+    yum install -y git
 RUN git clone https://github.com/Abhishek98451/myNodeJsApp.git
 WORKDIR /var/www/html/myNodeJsApp/
 CMD [ "php" ,'project/index.php' ]
