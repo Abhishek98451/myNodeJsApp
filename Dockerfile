@@ -4,8 +4,6 @@ FROM php:7.3-cli
 
 RUN #!/bin/bash
 RUN docker-php-ext-install mysqli
-RUN systemctl start httpd
-RUN systemctl enable httpd
 RUN usermod -a -G apache ec2-user
 RUN chown -R ec2-user:apache /var/www
 RUN chmod 2775 /var/www
