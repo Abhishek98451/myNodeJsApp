@@ -6,7 +6,6 @@ RUN yum install yum-utils -y
 RUN yum update -y 
 RUN yum install php php-mcrypt php-cli php-gd php-curl php-mysql php-ldap php-zip php-fileinfo -y
 RUN yum install -y httpd -y
-RUN chown -R ec2-user /var/www
 RUN chmod 2775 /var/www
 RUN find /var/www -type d -exec chmod 2775 {} \;
 RUN find /var/www -type f -exec chmod 0664 {} \;
