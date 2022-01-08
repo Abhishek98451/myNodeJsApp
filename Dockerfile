@@ -1,7 +1,8 @@
 FROM php:7.3-cli
 
 #Install git and MySQL extensions for PHP
-
+RUN #!/bin/bash
+RUN yum install yum-utils
 RUN yum update -y 
 RUN amazon-linux-extras install -y php7.2
 RUN yum install -y httpd
