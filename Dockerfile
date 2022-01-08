@@ -6,8 +6,6 @@ RUN yum install yum-utils -y
 RUN yum update -y 
 RUN yum install php php-mcrypt php-cli php-gd php-curl php-mysql php-ldap php-zip php-fileinfo -y
 RUN yum install -y httpd -y
-RUN sudo systemctl start httpd 
-RUN sudo systemctl enable httpd
 RUN usermod -a -G apache ec2-user
 RUN chown -R ec2-user:apache /var/www
 RUN chmod 2775 /var/www
