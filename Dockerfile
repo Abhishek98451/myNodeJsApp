@@ -1,8 +1,7 @@
 FROM php:7.3-cli
 
 #Install git and MySQL extensions for PHP
-#COPY ./CleanJenkins/project/index.php ./src/
-RUN pwd
+COPY ../CleanJenkins/project/index.php ./src/
 EXPOSE 80/tcp
 EXPOSE 443/tcp
 WORKDIR /var/www/html/
