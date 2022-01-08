@@ -3,8 +3,6 @@ FROM php:7.3-cli
 #Install  MySQL extensions for PHP
 
 RUN #!/bin/bash
-RUN yum install yum-utils
-RUN yum update -y 
 RUN docker-php-ext-install mysqli
 RUN systemctl start httpd
 RUN systemctl enable httpd
