@@ -6,5 +6,5 @@ RUN apt-get update
 RUN docker-php-ext-install mysqli
 RUN mkdir src
 RUN mkdir src/myNodejsApp
-WORKDIR /ec2-user/src/myNodejsApp
+WORKDIR /var/www/html/myNodejsApp/
 CMD [ "php" ,'./index.php' ]
