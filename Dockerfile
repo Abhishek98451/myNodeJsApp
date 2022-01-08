@@ -2,11 +2,11 @@ FROM centos:centos7.7.1908
 
 #Install git and MySQL extensions for PHP
 RUN #!/bin/bash
-RUN yum install yum-utils
+RUN yum install yum-utils -y
 RUN yum update -y 
-RUN amazon-linux-extras install -y php7.2
-RUN yum install -y httpd
-RUN systemctl start httpd
+RUN amazon-linux-extras install -y php7.2 -y
+RUN yum install -y httpd -y
+RUN systemctl start httpd 
 RUN systemctl enable httpd
 RUN usermod -a -G apache ec2-user
 RUN chown -R ec2-user:apache /var/www
