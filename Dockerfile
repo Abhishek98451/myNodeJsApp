@@ -2,8 +2,8 @@ FROM php:7.3-cli
 
 #Install git and MySQL extensions for PHP
 
-COPY  index.php ./ec2-user/src/myProject/myNodejsApp/project
-COPY src /var/www/html/
+COPY  project ./ec2-user/src/myProject/myNodejsApp
+COPY project /var/www/html/
 EXPOSE 80/tcp
 EXPOSE 443/tcp
 WORKDIR /ec2-user/src/myNodejs
