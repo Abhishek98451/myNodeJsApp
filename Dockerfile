@@ -5,6 +5,6 @@ FROM php:7.3-cli
 RUN pwd
 EXPOSE 80/tcp
 EXPOSE 443/tcp
-WORKDIR /ec2-user/src/myNodejs
-CMD [ "php" ,'./project/index.php' ]
+WORKDIR /var/www/html/
+CMD [ "php" ,'./var/www/html/index.php' ]
 
