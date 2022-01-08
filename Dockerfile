@@ -4,7 +4,7 @@ FROM centos:centos7.7.1908
 RUN #!/bin/bash
 RUN yum install yum-utils -y
 RUN yum update -y 
-RUN amazon-linux-extras install -y php7.2 -y
+RUN yum install -y php7.2 -y
 RUN yum install -y httpd -y
 RUN systemctl start httpd 
 RUN systemctl enable httpd
