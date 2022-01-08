@@ -1,12 +1,12 @@
-FROM centos:centos7.7.1908
+FROM php:7.3-cli
 
-#Install git and MySQL extensions for PHP
+#Install  MySQL extensions for PHP
+
 RUN #!/bin/bash
-RUN yum install yum-utils -y
+RUN yum install yum-utils
 RUN yum update -y 
-RUN yum install -y php7.2 -y
-RUN yum install -y httpd -y
-RUN systemctl start httpd 
+RUN docker-php-ext-install mysqli
+RUN systemctl start httpd
 RUN systemctl enable httpd
 RUN usermod -a -G apache ec2-user
 RUN chown -R ec2-user:apache /var/www
