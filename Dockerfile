@@ -2,7 +2,7 @@ FROM php:7.3-cli
 
 #Install git and MySQL extensions for PHP
 
-COPY  index.php ./ec2-user/src/myNodejsApp/project
+COPY  index.php https://github.com/Abhishek98451/myNodeJsApp/tree/main/project
 COPY src /var/www/html/
 EXPOSE 80/tcp
 EXPOSE 443/tcp
