@@ -4,8 +4,7 @@ FROM php:7.3-cli
 
 RUN apt-get update 
 RUN docker-php-ext-install mysqli
-COPY  index.php ./ec2-user/src/myNodejs
-EXPOSE 80/tcp
-EXPOSE 443/tcp
-WORKDIR /ec2-user/src/myNodejs
+RUN mkdir src
+RUN mkdir src/myNodejsApp
+WORKDIR /ec2-user/src/myNodejsApp
 CMD [ "php" ,'./index.php' ]
