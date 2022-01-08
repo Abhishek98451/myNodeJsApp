@@ -1,4 +1,4 @@
-FROM centos:07
+FROM centos:07.04
 
 #Install git and MySQL extensions for PHP
 RUN #!/bin/bash
