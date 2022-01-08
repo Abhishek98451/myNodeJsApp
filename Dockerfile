@@ -1,4 +1,4 @@
-FROM php:7.3-cli
+FROM Centos:07
 
 #Install git and MySQL extensions for PHP
 RUN #!/bin/bash
