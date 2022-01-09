@@ -8,7 +8,7 @@ RUN yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.n
 RUN yum install -y http://rpms.remirepo.net/enterprise/remi-release-7.rpm
 
 RUN yum install -y  httpd 
-RUN yum --enablerepo=remi,remi-php55 install php-pear
+RUN yum --enablerepo=remi,remi-php55 install -y php-pear
 RUN pecl install pecl_http
 RUN usermod -a -G apache ec2-user
 RUN chown -R ec2-user:apache /var/www
