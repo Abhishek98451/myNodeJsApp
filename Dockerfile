@@ -3,6 +3,7 @@ RUN #!/bin/bash
 Run yum install yum-utils -y
 RUN yum update -y
 RUN rpm --import https://repo.mysql.com/RPM-GPG-KEY-mysql
+rpm -Uvh https://repo.mysql.com/mysql80-community-release-el7-3.noarch.rpm
 RUN rpm -i http://rpms.famillecollet.com/enterprise/remi-release-5.rpm;
 RUN yum install -y php7.2
 RUN yum install -y  httpd 
