@@ -1,4 +1,4 @@
-FROM centos:7.04
+FROM centos:7.7
 RUN #!/bin/bash
 Run yum install yum-utils 
 RUN yum update -y
