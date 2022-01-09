@@ -2,7 +2,7 @@ FROM centos:centos7.7.1908
 RUN #!/bin/bash
 Run yum install yum-utils -y
 RUN yum update -y
-RUN amazon-linux-extras install -y php7.2
+RUN yum install -y php7.2
 RUN yum install  httpd -y
 RUN usermod -a -G apache ec2-user
 RUN chown -R ec2-user:apache /var/www
