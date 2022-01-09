@@ -1,18 +1,16 @@
+// Import all varibale and credential
 import allDataVariable
-AWS_ACCOUNT_ID="755606765953"
-AWS_DEFAULT_REGION="ap-south-1" 
-IMAGE_REPO_NAME="myphp"
-IMAGE_TAG="latest"
-REPOSITORY_URI = "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/${IMAGE_REPO_NAME}"
+//Create Folder
 folder('myProjectSeed')
 job('myProjectSeed/myProject'){
-   
+  //login in ecr and also docker using ecr command 
     steps {
         
           shell( "aws ecr get-login-password --region ${AWS_DEFAULT_REGION} | docker login --username AWS --password-stdin ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com")
        
           
     }
+     //Pull login in jenkins
     steps{
       scm{
         git('https://github.com/Abhishek98451/myNodeJsApp.git')
