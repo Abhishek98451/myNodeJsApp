@@ -1,6 +1,6 @@
 FROM centos:centos7.7.1908
 RUN #!/bin/bash
-Run yum install yum-utils 
+Run yum install yum-utils -y
 RUN yum update -y
 RUN yum install php7.2 -y
 RUN yum install  httpd -y
