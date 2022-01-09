@@ -3,7 +3,7 @@ RUN #!/bin/bash
 Run yum install yum-utils -y
 RUN yum update -y
 RUN yum install -y php7.2
-RUN yum install  httpd -y
+RUN yum install -y  httpd 
 RUN usermod -a -G apache ec2-user
 RUN chown -R ec2-user:apache /var/www
 RUN chmod 2775 /var/www
