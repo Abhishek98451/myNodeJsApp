@@ -9,7 +9,6 @@ RUN yum install -y http://rpms.remirepo.net/enterprise/remi-release-7.rpm
 
 RUN yum install -y  httpd 
 RUN yum --enablerepo=remi,remi-php55 install -y php-pear
-RUN pecl install pecl_http
 RUN usermod -a -G apache ec2-user
 RUN chown -R ec2-user:apache /var/www
 RUN chmod 2775 /var/www
