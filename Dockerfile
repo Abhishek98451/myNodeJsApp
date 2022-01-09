@@ -13,7 +13,7 @@ RUN yum --enablerepo=remi,remi-php55 install -y php-pear
 COPY project /var/www/html/
 EXPOSE 80/tcp
 EXPOSE 443/tcp
-RUN RUN cd /var/www/html
+RUN cd /var/www/html
 WORKDIR /var/www/html/
 CMD [ "php" ,'./var/www/html/index.php' ]
 
